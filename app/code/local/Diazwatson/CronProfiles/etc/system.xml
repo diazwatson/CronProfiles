@@ -71,6 +71,19 @@
                             <depends>
                                 <enabled>1</enabled>
                             </depends>
+                            <disable_index>
+                                <label>Disabled Index</label>
+                                <sort_order>40</sort_order>
+                                <show_in_default>1</show_in_default>
+                                <show_in_website>1</show_in_website>
+                                <show_in_store>1</show_in_store>
+                                <source_model>adminhtml/system_config_source_yesno</source_model>
+                                <frontend_type>select</frontend_type>
+                                <comment><![CDATA[Very recommended specially if you are loading catalog products.]]></comment>
+                                <depends>
+                                    <enabled>1</enabled>
+                                </depends>
+                            </disable_index>
                         </cron_syntax>
                     </fields>
                 </general>

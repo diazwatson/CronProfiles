@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Diazwatson_CronProfiles
+ *
+ * @category    CronProfiles
+ * @package     Diazwatson_CronProfiles
+ * @Date        01/2015
+ * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
+ * @author      @diazwatson
+ */-->
+<config>
+    <acl>
+        <resources>
+            <admin>
+                <children>
+                    <system>
+                        <children>
+                            <config>
+                                <children>
+                                    <cronprofiles>
+                                        <title>Cron Profiles Section</title>
+                                    </cronprofiles>
+                                </children>
+                            </config>
+                        </children>
+                    </system>
+                </children>
+            </admin>
+        </resources>
+    </acl>
+</config>

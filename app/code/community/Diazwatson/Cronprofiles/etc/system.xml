@@ -1,45 +1,41 @@
 <?xml version="1.0"?>
 <!--
 /**
- * CronProfiles
+ * Diazwatson_CronProfiles
  *
- * NOTICE OF LICENSE
- *
- * This source file is subject to the Open Software License (OSL 3.0)
- * that is bundled with this package in the file LICENSE.txt.
- * It is also available through the world-wide-web at this URL:
- * http://opensource.org/licenses/osl-3.0.php
- *
- * DISCLAIMER
- *
- * Do not edit or add to this file if you wish to upgrade this Module to
- * newer versions in the future.
- *
- * @category   Diazwatson
- * @package    Diazwatson_CronProfiles
- * @author     Raul E Watson (@diazwatson)
- * @license    http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
- *
- **/
--->
+ * @category    CronProfiles
+ * @package     Diazwatson_CronProfiles
+ * @Date        01/2015
+ * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
+ * @author      @diazwatson
+ */-->
 <config>
-    <sections>
-        <i4cronprofiles translate="label" module="i4cronprofiles">
-            <tab>i4all</tab>
+    <tabs>
+        <cronprofiles translate="label" module="cronprofiles">
             <label>Cron Profiles</label>
-            <sort_order>10</sort_order>
+            <sort_order>250</sort_order>
+        </cronprofiles>
+    </tabs>
+    <sections>
+        <cronprofiles translate="label" module="cronprofiles">
+            <class>separator-top</class>
+            <label>Cron Profiles</label>
+            <tab>cronprofiles</tab>
+            <frontend_type>text</frontend_type>
+            <sort_order>40</sort_order>
             <show_in_default>1</show_in_default>
             <show_in_website>1</show_in_website>
             <show_in_store>1</show_in_store>
             <groups>
-                <general>
+                <general translate="label" module="cronprofiles">
                     <label>General</label>
-                    <sort_order>10</sort_order>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>100</sort_order>
                     <show_in_default>1</show_in_default>
                     <show_in_website>1</show_in_website>
                     <show_in_store>1</show_in_store>
                     <fields>
-                        <enabled>
+                        <enabled translate="label">
                             <label>Enabled</label>
                             <sort_order>10</sort_order>
                             <show_in_default>1</show_in_default>
@@ -48,7 +44,7 @@
                             <source_model>adminhtml/system_config_source_yesno</source_model>
                             <frontend_type>select</frontend_type>
                         </enabled>
-                        <profile_ids>
+                        <profile_ids translate="label comment">
                             <label>Profile Ids</label>
                             <sort_order>20</sort_order>
                             <show_in_default>1</show_in_default>
@@ -60,7 +56,7 @@
                                 <enabled>1</enabled>
                             </depends>
                         </profile_ids>
-                        <cron_syntax>
+                        <cron_syntax translate="label comment">
                             <label>Cron Expresion</label>
                             <sort_order>30</sort_order>
                             <show_in_default>1</show_in_default>
@@ -71,23 +67,24 @@
                             <depends>
                                 <enabled>1</enabled>
                             </depends>
-                            <disable_index>
-                                <label>Disabled Index</label>
-                                <sort_order>40</sort_order>
-                                <show_in_default>1</show_in_default>
-                                <show_in_website>1</show_in_website>
-                                <show_in_store>1</show_in_store>
-                                <source_model>adminhtml/system_config_source_yesno</source_model>
-                                <frontend_type>select</frontend_type>
-                                <comment><![CDATA[Very recommended specially if you are loading catalog products.]]></comment>
-                                <depends>
-                                    <enabled>1</enabled>
-                                </depends>
-                            </disable_index>
                         </cron_syntax>
+                        <disable_index translate="label comment">
+                            <label>Disable Index</label>
+                            <sort_order>40</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <frontend_type>select</frontend_type>
+                            <comment><![CDATA[Very recommended specially if you are loading catalog products.]]></comment>
+                            <depends>
+                                <enabled>1</enabled>
+                            </depends>
+                        </disable_index>
                     </fields>
                 </general>
             </groups>
-        </i4cronprofiles>
+        </cronprofiles>
     </sections>
+
 </config>

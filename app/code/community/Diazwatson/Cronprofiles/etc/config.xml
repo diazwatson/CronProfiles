@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Diazwatson_CronProfiles
+ *
+ * @category    CronProfiles
+ * @package     Diazwatson_CronProfiles
+ * @Date        01/2015
+ * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
+ * @author      @diazwatson
+ */-->
+<config>
+    <modules>
+        <Diazwatson_Cronprofiles>
+            <version>0.2.0</version>
+        </Diazwatson_Cronprofiles>
+    </modules>
+    <global>
+        <models>
+            <cronprofiles>
+                <class>Diazwatson_Cronprofiles_Model</class>
+            </cronprofiles>
+        </models>
+        <helpers>
+            <cronprofiles>
+                <class>Diazwatson_Cronprofiles_Helper</class>
+            </cronprofiles>
+        </helpers>
+    </global>
+    <!--
+    /**
+    * Cron Configuration
+    */-->
+    <crontab>
+        <jobs>
+            <cronprofiles>
+                <schedule>
+                    <cron_expr>0 0 * * *</cron_expr>
+                    <config_path>cronprofiles/general/cron_syntax</config_path>
+                </schedule>
+                <run>
+                    <model>cronprofiles/cron::runDataflowProfiles</model>
+                </run>
+            </cronprofiles>
+        </jobs>
+    </crontab>
+    <!--
+    /**
+    * Default Admin Values
+    */-->
+    <default>
+        <cronprofiles>
+            <general>
+                <enabled>0</enabled>
+                <profile_ids>1</profile_ids>
+                <cron_syntax>0 0 * * *</cron_syntax>
+                <disable_index>1</disable_index>
+            </general>
+        </cronprofiles>
+    </default>
+</config>

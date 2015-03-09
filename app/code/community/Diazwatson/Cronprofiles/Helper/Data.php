@@ -1,9 +1,9 @@
 <?php
 /**
- * Namespace_modulename
+ * Diazwatson_CronProfiles
  *
- * @category    Modulename
- * @package     Namespace_modulename
+ * @category    CronProfiles
+ * @package     Diazwatson_CronProfiles
  * @Date        01/2015
  * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
  * @author      @diazwatson

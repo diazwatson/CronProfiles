@@ -13,6 +13,8 @@ class Diazwatson_Cronprofiles_Model_Cron extends Mage_Core_Model_Abstract{
 
 	const CRON_STRING_PATH = 'crontab/jobs/cronprofiles/cron_expr';
 
+
+
 	public function runDataFlowProfile()
 	{
 		if (Mage::getStoreConfig('cronprofiles/general/enabled')) {
@@ -21,7 +23,7 @@ class Diazwatson_Cronprofiles_Model_Cron extends Mage_Core_Model_Abstract{
 			 *  Get profile Ids from configuration
 			 */
 
-			$profiles = explode(",", Mage::getStoreConfig('i4cronprofiles/general/profile_ids'));
+			$profiles = explode(",", Mage::getStoreConfig('cronprofiles/general/profile_ids'));
 
 			if(!empty($profiles)){
 
